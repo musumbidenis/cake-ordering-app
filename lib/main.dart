@@ -134,11 +134,18 @@ class _MyMainPageState extends State<MyMainPage> {
                       child: Padding(
                         padding: const EdgeInsets.only(left:20.0, right: 20.0, top: 5.0, bottom: 5.0),
                         child: Center(
+                          child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (_){
+                                  return Second();
+                                }));
+                              },
                           child: Text("Lunch", style: TextStyle(
                             color: Colors.green,
                             fontSize: 16.0,
                             letterSpacing: 0.5
                           ),),
+                          ),
                         ),
                       ),
                     ),
