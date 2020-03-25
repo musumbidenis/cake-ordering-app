@@ -86,7 +86,8 @@ class _FruitCakesState extends State<FruitCakes> {
                 )
               ],
             ),
-
+          
+          ///Divider///
             Padding(
               padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 5.0, bottom: 5.0),
               child: Divider(
@@ -94,13 +95,16 @@ class _FruitCakesState extends State<FruitCakes> {
               ),
             ),
 
+          ///Categories List///
             Padding(
               padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 15.0),
               child: Container(
-                height: 40.0,
+                height: 50.0,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
+
+                    //Fruit Cakes Category//
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.green,
@@ -113,7 +117,10 @@ class _FruitCakesState extends State<FruitCakes> {
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
+                    //Sponge Cakes Category//
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -138,7 +145,10 @@ class _FruitCakesState extends State<FruitCakes> {
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
+                    //Chocolate Cakes Category//
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -163,7 +173,9 @@ class _FruitCakesState extends State<FruitCakes> {
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
                   ],
                 ),
               ),
@@ -360,6 +372,77 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text("With the fresh Aroma of Ginger", style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey,
+                                  ),),
+                                ),
+                            ],),
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    border: new Border.all(color: Colors.green),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+          ///Pineaple Coconut///
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Stack(
+                        alignment: Alignment.topRight,
+                        children: <Widget>[
+                          ClipRRect(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                topLeft: Radius.circular(10)),
+                            child: Image.asset("assets/PineappleCoconutCake.png", fit: BoxFit.fitWidth,),
+                          ),
+                      ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text("Pineapple Cococnut Cake", style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                ),),
+                              ),
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Text("Topped with a creamy rich Coconut Buttercream", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
