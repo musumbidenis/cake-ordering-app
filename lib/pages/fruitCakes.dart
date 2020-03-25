@@ -25,13 +25,14 @@ class _FruitCakesState extends State<FruitCakes> {
             Stack(
               children: <Widget>[
                 Container(
+                  width: 500,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                     )
                   ),
-                  child: Image.asset("assets/food1.jpg", fit: BoxFit.fitWidth,),
+                  child: Image.asset("assets/Cover.png", fit: BoxFit.fitWidth,),
                 ),
 
                 Padding(
@@ -168,6 +169,7 @@ class _FruitCakesState extends State<FruitCakes> {
               ),
             ),
 
+          ///Caramel Apple///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -184,13 +186,8 @@ class _FruitCakesState extends State<FruitCakes> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,),
+                            child: Image.asset("assets/caramelApple.png", fit: BoxFit.fitWidth,),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                       ],
                       ),
                       Row(
@@ -202,14 +199,14 @@ class _FruitCakesState extends State<FruitCakes> {
                               children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
-                                child: Text("Goru Mango Waffle", style: TextStyle(
+                                child: Text("Caramel Apple Cake", style: TextStyle(
                                   fontSize: 20.0,
                                   color: Colors.black,
                                 ),),
                               ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Continental", style: TextStyle(
+                                  child: Text("Topped with a layer of Caramel", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
@@ -242,7 +239,8 @@ class _FruitCakesState extends State<FruitCakes> {
                 ),
               ),
             ),
-
+ 
+          ///Orange Velvet///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -268,15 +266,10 @@ class _FruitCakesState extends State<FruitCakes> {
                               },
                               child: Hero(
                                   tag: 'food',
-                                  child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,)
+                                  child: Image.asset("assets/Orange-Velvet-cake.png", fit: BoxFit.fitWidth,)
                               ),
                             ),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                         ],
                       ),
                       Row(
@@ -288,19 +281,90 @@ class _FruitCakesState extends State<FruitCakes> {
                               children: <Widget>[
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Asian Ramen Noodle", style: TextStyle(
+                                  child: Text("Orange Velvet Cake", style: TextStyle(
                                     fontSize: 20.0,
                                     color: Colors.black,
                                   ),),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Co & Cookers", style: TextStyle(
+                                  child: Text("With Chocolate Buttercream frosting", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
                                 ),
                               ],),
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    border: new Border.all(color: Colors.green),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+          ///Lemon Ginger///
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Stack(
+                        alignment: Alignment.topRight,
+                        children: <Widget>[
+                          ClipRRect(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(10),
+                                topLeft: Radius.circular(10)),
+                            child: Image.asset("assets/LemonGingerCake.png", fit: BoxFit.fitWidth,),
+                          ),
+                      ],
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Text("Lemon Ginger Cake", style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.black,
+                                ),),
+                              ),
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Text("With the fresh Aroma of Ginger", style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey,
+                                  ),),
+                                ),
+                            ],),
                           ),
                           Spacer(),
                           Padding(

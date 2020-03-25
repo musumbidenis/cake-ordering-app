@@ -15,13 +15,14 @@ class ChocolateCakes extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
+                  width: 500,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                     )
                   ),
-                  child: Image.asset("assets/food1.jpg", fit: BoxFit.fitWidth,),
+                  child: Image.asset("assets/Cover.png", fit: BoxFit.fitWidth,),
                 ),
 
                 Padding(
