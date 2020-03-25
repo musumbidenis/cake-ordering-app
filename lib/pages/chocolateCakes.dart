@@ -1,8 +1,6 @@
-import 'package:cakeordering/description.dart';
 import 'package:cakeordering/descriptions/caramelApple.dart';
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:flutter/material.dart';
-import '../second.dart';
 import 'spongeCakes.dart';
 
 class ChocolateCakes extends StatelessWidget {

@@ -1,3 +1,4 @@
+import 'package:cakeordering/descriptions/caramelApple.dart';
 import 'package:cakeordering/pages/chocolateCakes.dart';
 import 'package:cakeordering/pages/spongeCakes.dart';
 import 'package:cakeordering/second.dart';
@@ -198,7 +199,17 @@ class _FruitCakesState extends State<FruitCakes> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/caramelApple.png", fit: BoxFit.fitWidth,),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (_){
+                                  return CaramelApple();
+                                }));
+                              },
+                              child: Hero(
+                                  tag: 'caramelApple',
+                                  child: Image.asset("assets/caramelApple.png", fit: BoxFit.fitWidth,)
+                              ),
+                            ),
                           ),
                       ],
                       ),
