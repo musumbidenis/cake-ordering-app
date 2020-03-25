@@ -40,7 +40,7 @@ class _SecondState extends State<Second> {
       child: Scaffold(
         body: TabBarView(
           children: [
-            Description(),
+            DetailPage(),
             Gallery(),
             Reviews(),
           ],

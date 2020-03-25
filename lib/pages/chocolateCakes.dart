@@ -1,3 +1,5 @@
+import 'package:cakeordering/description.dart';
+import 'package:cakeordering/descriptions/caramelApple.dart';
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:flutter/material.dart';
 import '../second.dart';
@@ -77,6 +79,7 @@ class ChocolateCakes extends StatelessWidget {
               ],
             ),
 
+          ///Divider///
             Padding(
               padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 5.0, bottom: 5.0),
               child: Divider(
@@ -84,11 +87,14 @@ class ChocolateCakes extends StatelessWidget {
               ),
             ),
 
+          ///Categories List///
             Padding(
               padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 15.0),
               child: Container(
-                height: 40.0,
+                height: 50.0,
                 child: ListView(
+
+                  //Fruit Cakes Category//
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     Container(
@@ -114,7 +120,10 @@ class ChocolateCakes extends StatelessWidget {
                       ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
+                    //Sponge Cakes Category//
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -139,7 +148,10 @@ class ChocolateCakes extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
+                    //Chocolate Cakes Category//
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.green,
@@ -156,12 +168,15 @@ class ChocolateCakes extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     SizedBox(width: 10.0,),
+
                   ],
                 ),
               ),
             ),
 
+          ///Oreo Chocolate Cake///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -178,13 +193,8 @@ class ChocolateCakes extends StatelessWidget {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,),
+                            child: Image.asset("assets/OreoChocolateCake.png", fit: BoxFit.fitWidth,),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                       ],
                       ),
                       Row(
@@ -196,14 +206,14 @@ class ChocolateCakes extends StatelessWidget {
                               children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
-                                child: Text("Goru Mango Waffle", style: TextStyle(
+                                child: Text("Oreo Chocolate Cake", style: TextStyle(
                                   fontSize: 20.0,
                                   color: Colors.black,
                                 ),),
                               ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Continental", style: TextStyle(
+                                  child: Text("Topped with Crusted Oreos", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
@@ -257,20 +267,15 @@ class ChocolateCakes extends StatelessWidget {
                             child: GestureDetector(
                               onTap: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return Second();
+                                  return CaramelApple();
                                 }));
                               },
                               child: Hero(
                                   tag: 'food',
-                                  child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,)
+                                  child: Image.asset("assets/chocolatePeanutButterCake.png", fit: BoxFit.fitWidth,)
                               ),
                             ),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                         ],
                       ),
                       Row(
@@ -282,14 +287,14 @@ class ChocolateCakes extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Asian Ramen Noodle", style: TextStyle(
+                                  child: Text("Chocolate Peanut Butter", style: TextStyle(
                                     fontSize: 20.0,
                                     color: Colors.black,
                                   ),),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Co & Cookers", style: TextStyle(
+                                  child: Text("Cake with Butter Frosting", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
