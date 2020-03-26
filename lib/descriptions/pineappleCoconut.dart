@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CaramelApple extends StatefulWidget {
+class PineappleCoconut extends StatefulWidget {
   @override
-  _CaramelAppleState createState() => _CaramelAppleState();
+  _PineappleCoconutState createState() => _PineappleCoconutState();
 }
 
-class _CaramelAppleState extends State<CaramelApple> {
+class _PineappleCoconutState extends State<PineappleCoconut> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _CaramelAppleState extends State<CaramelApple> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/caramelApple.png"),
+                      image: AssetImage("assets/PineappleCoconutCake.png"),
                       fit: BoxFit.cover,
                     ),
                   )),
@@ -38,13 +38,13 @@ class _CaramelAppleState extends State<CaramelApple> {
                       children: <Widget>[
                         SizedBox(height: 20.0),
                         Text(
-                          "Caramel Apple Cake",
+                          "Pineapple Coconut Cake",
                           style: TextStyle(color: Colors.white, fontSize: 35.0),
                         ),
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text("Topped with a layer of Caramel",
+                        Text("Topped with a creamy rich Coconut Buttercream",
                             style:
                                 TextStyle(fontSize: 16.0, color: Colors.white)),
                         SizedBox(height: 60.0),

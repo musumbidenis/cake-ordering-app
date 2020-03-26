@@ -1,4 +1,7 @@
 import 'package:cakeordering/descriptions/caramelApple.dart';
+import 'package:cakeordering/descriptions/lemonGinger.dart';
+import 'package:cakeordering/descriptions/orangeVelvet.dart';
+import 'package:cakeordering/descriptions/pineappleCoconut.dart';
 import 'package:cakeordering/pages/chocolateCakes.dart';
 import 'package:cakeordering/pages/spongeCakes.dart';
 import 'package:cakeordering/second.dart';
@@ -14,11 +17,9 @@ class FruitCakes extends StatefulWidget {
 }
 
 class _FruitCakesState extends State<FruitCakes> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,20 +29,21 @@ class _FruitCakesState extends State<FruitCakes> {
                 Container(
                   width: 500,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30.0),
-                      bottomRight: Radius.circular(30.0),
-                    )
+                      borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30.0),
+                    bottomRight: Radius.circular(30.0),
+                  )),
+                  child: Image.asset(
+                    "assets/Cover.png",
+                    fit: BoxFit.fitWidth,
                   ),
-                  child: Image.asset("assets/Cover.png", fit: BoxFit.fitWidth,),
                 ),
-
                 Padding(
-                  padding: const EdgeInsets.only(left:15.0, top: 40.0),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 15.0,
-                    child: Icon(Icons.keyboard_arrow_left, color: Colors.black, size: 20.0,),
+                  padding: const EdgeInsets.only(left: 15.0, top: 40.0),
+                  child: Icon(
+                    Icons.keyboard_arrow_left,
+                    color: Colors.white,
+                    size: 40.0,
                   ),
                 ),
               ],
@@ -49,37 +51,59 @@ class _FruitCakesState extends State<FruitCakes> {
 
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Text("Mwajuma Cake House", style: TextStyle(fontSize: 20.0, color: Colors.black),),
+              child: Text(
+                "Mwajuma Cake House",
+                style: TextStyle(fontSize: 20.0, color: Colors.black),
+              ),
             ),
 
             Row(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(left:15.0),
+                  padding: const EdgeInsets.only(left: 15.0),
                   child: Row(
                     children: <Widget>[
-                    Icon(Icons.location_on, color: Colors.grey,),
-                      SizedBox(width: 5.0,),
-                      Text("34, Tom Mboya Street, Nairobi ", style: TextStyle(fontSize: 14.0, color: Colors.black),),
-
-                  ],
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Text(
+                        "34, Tom Mboya Street, Nairobi ",
+                        style: TextStyle(fontSize: 14.0, color: Colors.black),
+                      ),
+                    ],
                   ),
                 ),
                 Spacer(),
                 Padding(
-                  padding: const EdgeInsets.only(right:15.0),
+                  padding: const EdgeInsets.only(right: 15.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.green.withOpacity(0.2),
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 3.0, bottom: 3.0),
+                      padding: const EdgeInsets.only(
+                          left: 7.0, right: 7.0, top: 3.0, bottom: 3.0),
                       child: Row(
                         children: <Widget>[
-                          Icon(Icons.access_time, color: Colors.green,),
-                          SizedBox(width: 5.0,),
-                          Text("Quick Deliveries", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold,fontSize: 14.0),)
+                          Icon(
+                            Icons.access_time,
+                            color: Colors.green,
+                          ),
+                          SizedBox(
+                            width: 5.0,
+                          ),
+                          Text(
+                            "Quick Deliveries",
+                            style: TextStyle(
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.0),
+                          )
                         ],
                       ),
                     ),
@@ -87,24 +111,25 @@ class _FruitCakesState extends State<FruitCakes> {
                 )
               ],
             ),
-          
-          ///Divider///
+
+            ///Divider///
             Padding(
-              padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 5.0, bottom: 5.0),
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 5.0, bottom: 5.0),
               child: Divider(
                 color: Colors.grey.withOpacity(0.2),
               ),
             ),
 
-          ///Categories List///
+            ///Categories List///
             Padding(
-              padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 15.0),
+              padding:
+                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
               child: Container(
-                height: 50.0,
+                height: 40.0,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-
                     //Fruit Cakes Category//
                     Container(
                       decoration: BoxDecoration(
@@ -112,14 +137,23 @@ class _FruitCakesState extends State<FruitCakes> {
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(left:20.0, right: 20.0, top: 5.0, bottom: 5.0),
+                        padding: const EdgeInsets.only(
+                            left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
                         child: Center(
-                          child: Text("Fruit Cakes", style: TextStyle(color: Colors.white, fontSize: 16.0, letterSpacing: 0.5),),
+                          child: Text(
+                            "Fruit Cakes",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+                                letterSpacing: 0.5),
+                          ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 10.0,),
+                    SizedBox(
+                      width: 10.0,
+                    ),
 
                     //Sponge Cakes Category//
                     Container(
@@ -129,25 +163,31 @@ class _FruitCakesState extends State<FruitCakes> {
                         border: new Border.all(color: Colors.green),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(left:20.0, right: 20.0, top: 5.0, bottom: 5.0),
+                        padding: const EdgeInsets.only(
+                            left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
                         child: Center(
                           child: GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return SpongeCakes();
-                                }));
-                              },
-                          child: Text("Sponge Cakes", style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 16.0,
-                            letterSpacing: 0.5
-                          ),),
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) {
+                                return SpongeCakes();
+                              }));
+                            },
+                            child: Text(
+                              "Sponge Cakes",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 16.0,
+                                  letterSpacing: 0.5),
+                            ),
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 10.0,),
+                    SizedBox(
+                      width: 10.0,
+                    ),
 
                     //Chocolate Cakes Category//
                     Container(
@@ -157,32 +197,37 @@ class _FruitCakesState extends State<FruitCakes> {
                         border: new Border.all(color: Colors.green),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(left:20.0, right: 20.0, top: 5.0, bottom: 5.0),
+                        padding: const EdgeInsets.only(
+                            left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
                         child: Center(
                           child: GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return ChocolateCakes();
-                                }));
-                              },
-                          child: Text("Chocolate Cakes", style: TextStyle(
-                            color: Colors.green,
-                            fontSize: 16.0,
-                            letterSpacing: 0.5
-                          ),),
+                            onTap: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (_) {
+                                return ChocolateCakes();
+                              }));
+                            },
+                            child: Text(
+                              "Chocolate Cakes",
+                              style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 16.0,
+                                  letterSpacing: 0.5),
+                            ),
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 10.0,),
-
+                    SizedBox(
+                      width: 10.0,
+                    ),
                   ],
                 ),
               ),
             ),
 
-          ///Caramel Apple///
+            ///Caramel Apple///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -200,18 +245,21 @@ class _FruitCakesState extends State<FruitCakes> {
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
                             child: GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (_){
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (_) {
                                   return CaramelApple();
                                 }));
                               },
                               child: Hero(
                                   tag: 'caramelApple',
-                                  child: Image.asset("assets/caramelApple.png", fit: BoxFit.fitWidth,)
-                              ),
+                                  child: Image.asset(
+                                    "assets/caramelApple.png",
+                                    fit: BoxFit.fitWidth,
+                                  )),
                             ),
                           ),
-                      ],
+                        ],
                       ),
                       Row(
                         children: <Widget>[
@@ -220,21 +268,28 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Text("Caramel Apple Cake", style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                ),),
-                              ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Topped with a layer of Caramel", style: TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.grey,
-                                  ),),
+                                  child: Text(
+                                    "Caramel Apple Cake",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ),
-                            ],),
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Text(
+                                    "Topped with a layer of Caramel",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Spacer(),
                           Padding(
@@ -244,12 +299,17 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.green,
+                                      size: 20.0,
+                                    ),
                                   ),
                                 )
                               ],
@@ -262,8 +322,8 @@ class _FruitCakesState extends State<FruitCakes> {
                 ),
               ),
             ),
- 
-          ///Orange Velvet///
+
+            ///Orange Velvet///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -282,15 +342,18 @@ class _FruitCakesState extends State<FruitCakes> {
                               topLeft: Radius.circular(10.0),
                             ),
                             child: GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return Second();
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (_) {
+                                  return OrangeVelvet();
                                 }));
                               },
                               child: Hero(
-                                  tag: 'food',
-                                  child: Image.asset("assets/Orange-Velvet-cake.png", fit: BoxFit.fitWidth,)
-                              ),
+                                  tag: 'Orange Velvet',
+                                  child: Image.asset(
+                                    "assets/Orange-Velvet-cake.png",
+                                    fit: BoxFit.fitWidth,
+                                  )),
                             ),
                           ),
                         ],
@@ -304,19 +367,26 @@ class _FruitCakesState extends State<FruitCakes> {
                               children: <Widget>[
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Orange Velvet Cake", style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black,
-                                  ),),
+                                  child: Text(
+                                    "Orange Velvet Cake",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("With Chocolate Buttercream frosting", style: TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.grey,
-                                  ),),
+                                  child: Text(
+                                    "With Chocolate Buttercream frosting",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
                                 ),
-                              ],),
+                              ],
+                            ),
                           ),
                           Spacer(),
                           Padding(
@@ -326,12 +396,17 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.green,
+                                      size: 20.0,
+                                    ),
                                   ),
                                 )
                               ],
@@ -345,7 +420,7 @@ class _FruitCakesState extends State<FruitCakes> {
               ),
             ),
 
-          ///Lemon Ginger///
+            ///Lemon Ginger///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -362,9 +437,22 @@ class _FruitCakesState extends State<FruitCakes> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/LemonGingerCake.png", fit: BoxFit.fitWidth,),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (_) {
+                                  return LemonGinger();
+                                }));
+                              },
+                              child: Hero(
+                                  tag: 'lemonGinger',
+                                  child: Image.asset(
+                                    "assets/LemonGingerCake.png",
+                                    fit: BoxFit.fitWidth,
+                                  )),
+                            ),
                           ),
-                      ],
+                        ],
                       ),
                       Row(
                         children: <Widget>[
@@ -373,21 +461,28 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Text("Lemon Ginger Cake", style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                ),),
-                              ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("With the fresh Aroma of Ginger", style: TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.grey,
-                                  ),),
+                                  child: Text(
+                                    "Lemon Ginger Cake",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ),
-                            ],),
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Text(
+                                    "With the fresh Aroma of Ginger",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Spacer(),
                           Padding(
@@ -397,12 +492,17 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.green,
+                                      size: 20.0,
+                                    ),
                                   ),
                                 )
                               ],
@@ -416,7 +516,7 @@ class _FruitCakesState extends State<FruitCakes> {
               ),
             ),
 
-          ///Pineaple Coconut///
+            ///Pineaple Coconut///
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
@@ -433,9 +533,22 @@ class _FruitCakesState extends State<FruitCakes> {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/PineappleCoconutCake.png", fit: BoxFit.fitWidth,),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (_) {
+                                  return PineappleCoconut();
+                                }));
+                              },
+                              child: Hero(
+                                  tag: 'pineappleCoconut',
+                                  child: Image.asset(
+                                    "assets/PineappleCoconutCake.png",
+                                    fit: BoxFit.fitWidth,
+                                  )),
+                            ),
                           ),
-                      ],
+                        ],
                       ),
                       Row(
                         children: <Widget>[
@@ -444,21 +557,28 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Text("Pineapple Cococnut Cake", style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                ),),
-                              ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Topped with a creamy rich Coconut Buttercream", style: TextStyle(
-                                    fontSize: 12.0,
-                                    color: Colors.grey,
-                                  ),),
+                                  child: Text(
+                                    "Pineapple Cococnut Cake",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ),
-                            ],),
+                                Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: Text(
+                                    "Topped with a creamy rich Coconut Buttercream",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           Spacer(),
                           Padding(
@@ -468,12 +588,17 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: Colors.green,
+                                      size: 20.0,
+                                    ),
                                   ),
                                 )
                               ],
@@ -486,11 +611,9 @@ class _FruitCakesState extends State<FruitCakes> {
                 ),
               ),
             ),
-
           ],
         ),
       ),
-
     );
   }
 }

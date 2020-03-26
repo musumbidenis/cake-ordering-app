@@ -1,7 +1,6 @@
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:cakeordering/second.dart';
 import 'package:flutter/material.dart';
-
 import 'chocolateCakes.dart';
 
 class SpongeCakes extends StatelessWidget {
@@ -28,11 +27,7 @@ class SpongeCakes extends StatelessWidget {
 
                 Padding(
                   padding: const EdgeInsets.only(left:15.0, top: 40.0),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 15.0,
-                    child: Icon(Icons.keyboard_arrow_left, color: Colors.black, size: 20.0,),
-                  ),
+                    child: Icon(Icons.keyboard_arrow_left, color: Colors.white, size: 40.0,),
                 ),
               ],
             ),

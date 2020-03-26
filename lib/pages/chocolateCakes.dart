@@ -27,11 +27,7 @@ class ChocolateCakes extends StatelessWidget {
 
                 Padding(
                   padding: const EdgeInsets.only(left:15.0, top: 40.0),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 15.0,
-                    child: Icon(Icons.keyboard_arrow_left, color: Colors.black, size: 20.0,),
-                  ),
+                    child: Icon(Icons.keyboard_arrow_left, color: Colors.white, size: 40.0,),
                 ),
               ],
             ),
@@ -89,7 +85,7 @@ class ChocolateCakes extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left:15.0, right: 15.0, top: 15.0),
               child: Container(
-                height: 50.0,
+                height: 40.0,
                 child: ListView(
 
                   //Fruit Cakes Category//

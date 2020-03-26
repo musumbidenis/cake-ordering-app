@@ -1,4 +1,3 @@
-import 'package:cakeordering/pages/chocolateCakes.dart';
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cake Ordering App',
-      home: ChocolateCakes(),
+      home: FruitCakes(),
     );
   }
 }
