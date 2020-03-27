@@ -101,7 +101,7 @@ class _OrangeVelvetState extends State<OrangeVelvet> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "A spiced cake topped with a layer of Caramel and then crushed apples. This cake is gorgeous, perfect for every fall festivity you have coming your way.",
+                    "A moist and tender crumbed orange cake with a simple but delicious Chocolate Buttercream frosting. The cake gets its Citrus flovour punch from the finely minced zest of Oranges incorporated into butter.",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),

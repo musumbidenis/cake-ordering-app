@@ -100,7 +100,7 @@ class _LemonGingerState extends State<LemonGinger> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "A spiced cake topped with a layer of Caramel and then crushed apples. This cake is gorgeous, perfect for every fall festivity you have coming your way.",
+                    "Moist lemon ginger cake with the fresh aroma of ginger makes for a perfect snack any time of the day.",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),

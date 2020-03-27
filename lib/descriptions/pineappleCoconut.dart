@@ -100,7 +100,7 @@ class _PineappleCoconutState extends State<PineappleCoconut> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "A spiced cake topped with a layer of Caramel and then crushed apples. This cake is gorgeous, perfect for every fall festivity you have coming your way.",
+                    "Moist and delicious pineapple coconut cake perfected with a smooth, sweet and flavourful pineapple filling and topped with a creamy rich coconut buttercream making this southern classic cake one for the ages",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),
