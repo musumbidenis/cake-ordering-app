@@ -17,6 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  flutter_sms: ^2.0.0+2
+  slide_popup_dialog: ^0.0.2
   rflutter_alert: ^1.0.3
   flutter:
     sdk: flutter

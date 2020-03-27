@@ -10,6 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cake Ordering App',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+      ),
       home: FruitCakes(),
     );
   }

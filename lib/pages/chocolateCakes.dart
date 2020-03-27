@@ -15,7 +15,8 @@ class ChocolateCakes extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                  width: 500,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.3,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
@@ -50,26 +51,6 @@ class ChocolateCakes extends StatelessWidget {
                   ],
                   ),
                 ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(right:15.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.green.withOpacity(0.2),
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 3.0, bottom: 3.0),
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.access_time, color: Colors.green,),
-                          SizedBox(width: 5.0,),
-                          Text("Quick Deliveries", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold,fontSize: 14.0),)
-                        ],
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
 

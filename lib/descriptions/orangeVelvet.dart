@@ -1,3 +1,4 @@
+import 'package:cakeordering/cart.dart';
 import 'package:flutter/material.dart';
 
 class OrangeVelvet extends StatefulWidget {
@@ -108,7 +109,13 @@ class _OrangeVelvetState extends State<OrangeVelvet> {
                       padding: EdgeInsets.symmetric(vertical: 17.0),
                       width: MediaQuery.of(context).size.width,
                       child: RaisedButton(
-                        onPressed: () => {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Cart(title: "Orange Velvet Cake",subTitle: "with Chocolate Buttercream frosting",price: 800,),
+                              ));
+                        },
                         color: Colors.green,
                         child: Text("PURCHASE",
                             style: TextStyle(color: Colors.white)),

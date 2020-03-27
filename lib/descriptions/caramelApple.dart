@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+import '../cart.dart';
 
 class CaramelApple extends StatefulWidget {
   @override
@@ -109,7 +109,13 @@ class _CaramelAppleState extends State<CaramelApple> {
                       padding: EdgeInsets.symmetric(vertical: 17.0),
                       width: MediaQuery.of(context).size.width,
                       child: RaisedButton(
-                        onPressed: () => _onClick(context),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Cart(title: "Caramel Apple Cake",subTitle: "Topped with a layer of Caramel",price: 800,),
+                              ));
+                        },
                         color: Colors.green,
                         child: Text("PURCHASE",
                             style: TextStyle(color: Colors.white)),
@@ -121,43 +127,5 @@ class _CaramelAppleState extends State<CaramelApple> {
         ],
       ),
     );
-  }
-
-  // Activates Purchase Button//
-  _onClick(context) {
-    Alert(
-        context: context,
-        title: "Caramel Apple Cake",
-        content: Container(
-          padding: EdgeInsets.symmetric(horizontal:20, vertical:30),
-          height: MediaQuery.of(context).size.height *0.40,
-          width: MediaQuery.of(context).size.width * 0.95,
-          child: Column(
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                icon: Icon(Icons.account_circle),
-                labelText: 'Username',
-              ),
-            ),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                icon: Icon(Icons.lock),
-                labelText: 'Password',
-              ),
-            ),
-          ],
-        ),
-        ),
-        buttons: [
-          DialogButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              "LOGIN",
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-          )
-        ]).show();
   }
 }

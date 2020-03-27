@@ -15,7 +15,8 @@ class SpongeCakes extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                  width: 500,
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.3,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
