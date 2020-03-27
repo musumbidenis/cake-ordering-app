@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../cart.dart';
 
-class LemonGinger extends StatefulWidget {
+class ChocolatePeanut extends StatefulWidget {
   @override
-  _LemonGingerState createState() => _LemonGingerState();
+  _ChocolatePeanutState createState() => _ChocolatePeanutState();
 }
 
-class _LemonGingerState extends State<LemonGinger> {
+class _ChocolatePeanutState extends State<ChocolatePeanut> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _LemonGingerState extends State<LemonGinger> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/LemonGingerCake.png"),
+                      image: AssetImage("assets/chocolatePeanutButterCake.png"),
                       fit: BoxFit.cover,
                     ),
                   )),
@@ -40,13 +40,13 @@ class _LemonGingerState extends State<LemonGinger> {
                       children: <Widget>[
                         SizedBox(height: 20.0),
                         Text(
-                          "Lemon Ginger Cake",
+                          "Chocolate Peanut Cake",
                           style: TextStyle(color: Colors.white, fontSize: 35.0),
                         ),
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text("with the fresh Aroma of Ginger",
+                        Text("Layered with peanut butter frosting",
                             style:
                                 TextStyle(fontSize: 16.0, color: Colors.white)),
                         SizedBox(height: 60.0),
@@ -102,7 +102,7 @@ class _LemonGingerState extends State<LemonGinger> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Moist lemon ginger cake with the fresh aroma of ginger makes for a perfect snack any time of the day.",
+                    "The cake is layered with peanut butter frosting and chocolate ganache",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),
@@ -114,7 +114,7 @@ class _LemonGingerState extends State<LemonGinger> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Cart(title: "Lemon Ginger Cake",subTitle: "with the fresh Aroma of Ginger",price: 800,),
+                                builder: (context) => Cart(title: "Chocolate Peanut Cake",subTitle: "Layered with peanut butter frosting", price: 800,),
                               ));
                         },
                         color: Colors.green,

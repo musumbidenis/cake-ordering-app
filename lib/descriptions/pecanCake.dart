@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
 import '../cart.dart';
 
-class LemonGinger extends StatefulWidget {
+class Pecan extends StatefulWidget {
   @override
-  _LemonGingerState createState() => _LemonGingerState();
+  _PecanState createState() => _PecanState();
 }
 
-class _LemonGingerState extends State<LemonGinger> {
+class _PecanState extends State<Pecan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +20,7 @@ class _LemonGingerState extends State<LemonGinger> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/LemonGingerCake.png"),
+                      image: AssetImage("assets/PecanCake.png"),
                       fit: BoxFit.cover,
                     ),
                   )),
@@ -40,13 +39,13 @@ class _LemonGingerState extends State<LemonGinger> {
                       children: <Widget>[
                         SizedBox(height: 20.0),
                         Text(
-                          "Lemon Ginger Cake",
+                          "Pecan Cake",
                           style: TextStyle(color: Colors.white, fontSize: 35.0),
                         ),
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text("with the fresh Aroma of Ginger",
+                        Text("With Salted Caramel Frosting",
                             style:
                                 TextStyle(fontSize: 16.0, color: Colors.white)),
                         SizedBox(height: 60.0),
@@ -102,7 +101,7 @@ class _LemonGingerState extends State<LemonGinger> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Moist lemon ginger cake with the fresh aroma of ginger makes for a perfect snack any time of the day.",
+                    "Pecan Cake With Salted Caramel Frosting is a soft, fluffy cake and a creamy frosting, perfect for any celebration. Pecan Cake with salted caramel whipped cream frosting. This is one delicious cake that’s for sure.",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),
@@ -114,7 +113,7 @@ class _LemonGingerState extends State<LemonGinger> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Cart(title: "Lemon Ginger Cake",subTitle: "with the fresh Aroma of Ginger",price: 800,),
+                                builder: (context) => Cart(title: "Pecan Cake",subTitle: " With Salted Caramel Frosting", price: 800,),
                               ));
                         },
                         color: Colors.green,

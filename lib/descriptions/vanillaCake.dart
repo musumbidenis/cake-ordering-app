@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../cart.dart';
 
-class LemonGinger extends StatefulWidget {
+class Vanilla extends StatefulWidget {
   @override
-  _LemonGingerState createState() => _LemonGingerState();
+  _VanillaState createState() => _VanillaState();
 }
 
-class _LemonGingerState extends State<LemonGinger> {
+class _VanillaState extends State<Vanilla> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _LemonGingerState extends State<LemonGinger> {
                   height: MediaQuery.of(context).size.height * 0.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/LemonGingerCake.png"),
+                      image: AssetImage("assets/VanillaCake.png"),
                       fit: BoxFit.cover,
                     ),
                   )),
@@ -40,13 +40,13 @@ class _LemonGingerState extends State<LemonGinger> {
                       children: <Widget>[
                         SizedBox(height: 20.0),
                         Text(
-                          "Lemon Ginger Cake",
+                          "Vanilla Cake",
                           style: TextStyle(color: Colors.white, fontSize: 35.0),
                         ),
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text("with the fresh Aroma of Ginger",
+                        Text("with frosting around the top edge of the cake",
                             style:
                                 TextStyle(fontSize: 16.0, color: Colors.white)),
                         SizedBox(height: 60.0),
@@ -102,7 +102,7 @@ class _LemonGingerState extends State<LemonGinger> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Moist lemon ginger cake with the fresh aroma of ginger makes for a perfect snack any time of the day.",
+                    "It’s a super light cake, has a nice fluff factor and again is nice and moist. This cake has been a long standing vanilla cake around here and for the most part satisfies. It’s not that fabulous as a cupcake though, for some.",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),
@@ -114,7 +114,7 @@ class _LemonGingerState extends State<LemonGinger> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Cart(title: "Lemon Ginger Cake",subTitle: "with the fresh Aroma of Ginger",price: 800,),
+                                builder: (context) => Cart(title: "Vanilla Cake",subTitle: "with frosting around the top edge of the cake", price: 800,),
                               ));
                         },
                         color: Colors.green,

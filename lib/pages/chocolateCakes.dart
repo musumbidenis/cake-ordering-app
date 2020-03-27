@@ -1,4 +1,5 @@
-import 'package:cakeordering/descriptions/caramelApple.dart';
+import 'package:cakeordering/descriptions/oreoChocolate.dart';
+import 'package:cakeordering/descriptions/chocolatePeanut.dart';
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:flutter/material.dart';
 import 'spongeCakes.dart';
@@ -168,9 +169,18 @@ class ChocolateCakes extends StatelessWidget {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/OreoChocolateCake.png", fit: BoxFit.fitWidth,),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (_){
+                                  return OreoChocolate();
+                                }));
+                              },
+                              child: Hero(
+                                  tag: 'oreoChocolate',
+                                  child: Image.asset("assets/OreoChocolateCake.png", fit: BoxFit.fitWidth,)
+                              ),
                           ),
-                      ],
+                          )],
                       ),
                       Row(
                         children: <Widget>[
@@ -242,11 +252,11 @@ class ChocolateCakes extends StatelessWidget {
                             child: GestureDetector(
                               onTap: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return CaramelApple();
+                                  return ChocolatePeanut();
                                 }));
                               },
                               child: Hero(
-                                  tag: 'food',
+                                  tag: 'chocolatePeanut',
                                   child: Image.asset("assets/chocolatePeanutButterCake.png", fit: BoxFit.fitWidth,)
                               ),
                             ),

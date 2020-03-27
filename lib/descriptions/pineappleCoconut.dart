@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../cart.dart';
+
 class PineappleCoconut extends StatefulWidget {
   @override
   _PineappleCoconutState createState() => _PineappleCoconutState();
@@ -108,7 +110,13 @@ class _PineappleCoconutState extends State<PineappleCoconut> {
                       padding: EdgeInsets.symmetric(vertical: 17.0),
                       width: MediaQuery.of(context).size.width,
                       child: RaisedButton(
-                        onPressed: () => {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Cart(title: "Pineapple Coconut Cake",subTitle: "Topped with a creamy rich Coconut Buttercream",price: 800,),
+                              ));
+                        },
                         color: Colors.green,
                         child: Text("PURCHASE",
                             style: TextStyle(color: Colors.white)),

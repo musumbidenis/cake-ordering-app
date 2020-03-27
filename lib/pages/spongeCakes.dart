@@ -1,4 +1,6 @@
-import 'package:cakeordering/descriptions/caramelApple.dart';
+
+import 'package:cakeordering/descriptions/pecanCake.dart';
+import 'package:cakeordering/descriptions/vanillaCake.dart';
 import 'package:cakeordering/pages/fruitCakes.dart';
 import 'package:flutter/material.dart';
 import 'chocolateCakes.dart';
@@ -46,31 +48,11 @@ class SpongeCakes extends StatelessWidget {
                     children: <Widget>[
                     Icon(Icons.location_on, color: Colors.grey,),
                       SizedBox(width: 5.0,),
-                      Text("34, Tom Mboya Street, Nairobi ", style: TextStyle(fontSize: 14.0, color: Colors.black),),
+                      Text("34 Tom Mboya Street, Nairobi ", style: TextStyle(fontSize: 14.0, color: Colors.black),),
 
                   ],
                   ),
                 ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(right:15.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.green.withOpacity(0.2),
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 3.0, bottom: 3.0),
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.access_time, color: Colors.green,),
-                          SizedBox(width: 5.0,),
-                          Text("Quick Deliveries", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold,fontSize: 14.0),)
-                        ],
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
 
@@ -174,13 +156,18 @@ class SpongeCakes extends StatelessWidget {
                             borderRadius: BorderRadius.only(
                                 topRight: Radius.circular(10),
                                 topLeft: Radius.circular(10)),
-                            child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,),
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (_){
+                                  return Pecan();
+                                }));
+                              },
+                              child: Hero(
+                                  tag: 'pecanCake',
+                                  child: Image.asset("assets/PecanCake.png", fit: BoxFit.fitWidth,)
+                              ),
+                            ),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                       ],
                       ),
                       Row(
@@ -192,14 +179,14 @@ class SpongeCakes extends StatelessWidget {
                               children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.all(5.0),
-                                child: Text("Goru Mango Waffle", style: TextStyle(
+                                child: Text("Pecan Cake", style: TextStyle(
                                   fontSize: 20.0,
                                   color: Colors.black,
                                 ),),
                               ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Continental", style: TextStyle(
+                                  child: Text("With Salted Caramel Frosting", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
@@ -253,20 +240,15 @@ class SpongeCakes extends StatelessWidget {
                             child: GestureDetector(
                               onTap: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (_){
-                                  return CaramelApple();
+                                  return Vanilla();
                                 }));
                               },
                               child: Hero(
-                                  tag: 'food',
-                                  child: Image.asset("assets/food2.jpg", fit: BoxFit.fitWidth,)
+                                  tag: 'vanillaCake',
+                                  child: Image.asset("assets/VanillaCake.png", fit: BoxFit.fitWidth,)
                               ),
                             ),
                           ),
-                          CircleAvatar(
-                            backgroundColor: Colors.grey.withOpacity(0.7),
-                            radius: 25.0,
-                            child: Icon(Icons.favorite_border, color: Colors.white, size: 30.0,),
-                          )
                         ],
                       ),
                       Row(
@@ -278,14 +260,14 @@ class SpongeCakes extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Asian Ramen Noodle", style: TextStyle(
+                                  child: Text("Vanilla Cake", style: TextStyle(
                                     fontSize: 20.0,
                                     color: Colors.black,
                                   ),),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Co & Cookers", style: TextStyle(
+                                  child: Text("with frosting around the top edge of the cake", style: TextStyle(
                                     fontSize: 12.0,
                                     color: Colors.grey,
                                   ),),
