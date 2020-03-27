@@ -4,13 +4,9 @@ import 'package:cakeordering/descriptions/orangeVelvet.dart';
 import 'package:cakeordering/descriptions/pineappleCoconut.dart';
 import 'package:cakeordering/pages/chocolateCakes.dart';
 import 'package:cakeordering/pages/spongeCakes.dart';
-import 'package:cakeordering/second.dart';
 import 'package:flutter/material.dart';
 
 class FruitCakes extends StatefulWidget {
-  FruitCakes({Key key, this.title}) : super(key: key);
-
-  final String title;
 
   @override
   _FruitCakesState createState() => _FruitCakesState();
@@ -71,44 +67,12 @@ class _FruitCakesState extends State<FruitCakes> {
                         width: 5.0,
                       ),
                       Text(
-                        "34, Tom Mboya Street, Nairobi ",
+                        "34 Tom Mboya Street, Nairobi ",
                         style: TextStyle(fontSize: 14.0, color: Colors.black),
                       ),
                     ],
                   ),
                 ),
-                Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(right: 15.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.green.withOpacity(0.2),
-                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          left: 7.0, right: 7.0, top: 3.0, bottom: 3.0),
-                      child: Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.access_time,
-                            color: Colors.green,
-                          ),
-                          SizedBox(
-                            width: 5.0,
-                          ),
-                          Text(
-                            "Quick Deliveries",
-                            style: TextStyle(
-                                color: Colors.green,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14.0),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
 
@@ -130,6 +94,7 @@ class _FruitCakesState extends State<FruitCakes> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
+                    
                     //Fruit Cakes Category//
                     Container(
                       decoration: BoxDecoration(
@@ -226,6 +191,8 @@ class _FruitCakesState extends State<FruitCakes> {
                 ),
               ),
             ),
+
+            
 
             ///Caramel Apple///
             Padding(
