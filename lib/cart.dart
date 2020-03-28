@@ -5,7 +5,12 @@ class Cart extends StatefulWidget {
   final String title;
   final String subTitle;
   final int price;
-  Cart({Key key, @required this.title,@required this.subTitle,@required this.price}): super(key: key);
+  Cart(
+      {Key key,
+      @required this.title,
+      @required this.subTitle,
+      @required this.price})
+      : super(key: key);
 
   @override
   _CartState createState() => _CartState();
@@ -13,6 +18,8 @@ class Cart extends StatefulWidget {
 
 class _CartState extends State<Cart> {
   String _notification;
+
+  GlobalKey<FormState> _formKey = GlobalKey();
 
   TextEditingController writingController = TextEditingController();
   TextEditingController addressController = TextEditingController();
@@ -80,45 +87,74 @@ class _CartState extends State<Cart> {
 
           Padding(
             padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-            child: Column(
-              children: <Widget>[
-                TextField(
-                  controller: writingController,
-                  decoration: InputDecoration(
-                    labelText: 'What to be wrtten on top of the cake',
-                    labelStyle: TextStyle(fontSize: 18),
-                  ),
-                ),
-                TextField(
-                  controller: addressController,
-                  decoration: InputDecoration(
-                    labelText: 'Delivery Address',
-                    labelStyle: TextStyle(fontSize: 18),
-                  ),
-                ),
-                TextField(
-                  keyboardType: TextInputType.number,
-                  controller: phoneController,
-                  decoration: InputDecoration(
-                    labelText: 'Phone Number',
-                    labelStyle: TextStyle(
-                      fontSize: 18,
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: <Widget>[
+                  TextFormField(
+                    controller: writingController,
+                    validator: (String value) {
+                      if (value.isEmpty) {
+                        return "Value cannot be empty. Input values to proceed!";
+                      } else if (value.length > 20) {
+                        return "Maximum of 20 words required!";
+                      } else {
+                        return null;
+                      }
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'What to be wrtten on top of the cake',
+                      labelStyle: TextStyle(fontSize: 18),
                     ),
+                    textInputAction: TextInputAction.next,
                   ),
-                ),
-                SizedBox(height:15),
-                Container(
-                    padding: EdgeInsets.symmetric(vertical: 17.0),
-                    width: MediaQuery.of(context).size.width,
-                    child: RaisedButton(
-                      onPressed: (){
-                        _sendSMS("message", ['0713710887']);
+                  TextFormField(
+                    controller: addressController,
+                    validator: (String value){
+                      if (value.isEmpty) {
+                        return "Value cannot be empty. Input values to proceed!";
+                      } else {
+                        return null;
+                      }
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Delivery Address',
+                      labelStyle: TextStyle(fontSize: 18),
+                    ),
+                    textInputAction: TextInputAction.next,
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: phoneController,
+                    validator: (String value){
+                      if (value.isEmpty) {
+                        return "Value cannot be empty. Input values to proceed!";
+                      } else {
+                        return null;
+                      }
+                    },
+                    decoration: InputDecoration(
+                      labelText: 'Phone Number',
+                      labelStyle: TextStyle(
+                        fontSize: 18,
+                      ),
+                    ),
+                    textInputAction: TextInputAction.done,
+                  ),
+                  SizedBox(height: 15),
+                  Container(
+                      padding: EdgeInsets.symmetric(vertical: 17.0),
+                      width: MediaQuery.of(context).size.width,
+                      child: RaisedButton(
+                        onPressed: () {
+                          _sendSMS("message", ['0713710887']);
                         },
-                      color: Colors.green,
-                      child: Text("PLACE ORDER",
-                          style: TextStyle(color: Colors.white)),
-                    )),
-              ],
+                        color: Colors.green,
+                        child: Text("PLACE ORDER",
+                            style: TextStyle(color: Colors.white)),
+                      )),
+                ],
+              ),
             ),
           ),
         ])));
@@ -126,17 +162,22 @@ class _CartState extends State<Cart> {
 
   ///Send SMS Function///
   _sendSMS(String message, List<String> recipents) async {
-    String title = 'Cake Type: ' + widget.title;
-    String phone = "            Phone Number: " + phoneController.text;
-    String address = "               Delivery Address: " + addressController.text;
-    String writing = "                                                       Writing on top: " + writingController.text;
-    String message = title + phone + address + writing;
+    var form = _formKey.currentState;
+    if (form.validate()) {
+      form.save();
 
-    try {
-      String _result = await sendSMS(message: message, recipients: recipents);
-      setState(() => _notification = _result);
-    } catch (error) {
-      setState(() => _notification = error.toString());
+      String title ="Cake Type: " + widget.title;
+      String phone ="            Phone Number: " + phoneController.text;
+      String address ="               Delivery Address: " + addressController.text;
+      String writing ="                                                       Writing on top: " + writingController.text;
+      String message = title + phone + address + writing;
+
+      try {
+        String _result = await sendSMS(message: message, recipients: recipents);
+        setState(() => _notification = _result);
+      } catch (error) {
+        setState(() => _notification = error.toString());
+      }
     }
   }
 }
