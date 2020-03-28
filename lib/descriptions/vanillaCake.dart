@@ -61,7 +61,7 @@ class _VanillaState extends State<Vanilla> {
                                       border: Border.all(color: Colors.white),
                                       borderRadius: BorderRadius.circular(5.0)),
                                   child: Text(
-                                    "\Kshs. 800",
+                                    "\Kshs. 1150",
                                     style: TextStyle(
                                         fontSize: 18.0,
                                         color: Colors.white,

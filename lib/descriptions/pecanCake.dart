@@ -60,7 +60,7 @@ class _PecanState extends State<Pecan> {
                                       border: Border.all(color: Colors.white),
                                       borderRadius: BorderRadius.circular(5.0)),
                                   child: Text(
-                                    "\Kshs. 800",
+                                    "\Kshs. 950",
                                     style: TextStyle(
                                         fontSize: 18.0,
                                         color: Colors.white,

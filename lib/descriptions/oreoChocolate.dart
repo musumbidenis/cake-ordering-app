@@ -61,7 +61,7 @@ class _OreoChocolateState extends State<OreoChocolate> {
                                       border: Border.all(color: Colors.white),
                                       borderRadius: BorderRadius.circular(5.0)),
                                   child: Text(
-                                    "\Kshs. 800",
+                                    "\Kshs. 1300",
                                     style: TextStyle(
                                         fontSize: 18.0,
                                         color: Colors.white,
@@ -102,7 +102,7 @@ class _OreoChocolateState extends State<OreoChocolate> {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Moist and delicious pineapple coconut cake perfected with a smooth, sweet and flavourful pineapple filling and topped with a creamy rich coconut buttercream making this southern classic cake one for the ages",
+                    "This Oreo Chocolate Cake is layers of moist chocolate cake filled with a creamy Oreo frosting and topped with more crushed Oreos and Chocolate shavings.",
                     style: TextStyle(fontSize: 18.0),
                   ),
                   SizedBox(height: 30.0),

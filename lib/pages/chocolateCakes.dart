@@ -28,8 +28,17 @@ class ChocolateCakes extends StatelessWidget {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(left:15.0, top: 40.0),
-                    child: Icon(Icons.keyboard_arrow_left, color: Colors.white, size: 40.0,),
+                  padding: const EdgeInsets.only(left: 15.0, top: 40.0),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.keyboard_arrow_left,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -47,7 +56,7 @@ class ChocolateCakes extends StatelessWidget {
                     children: <Widget>[
                     Icon(Icons.location_on, color: Colors.grey,),
                       SizedBox(width: 5.0,),
-                      Text("34, Tom Mboya Street, Nairobi ", style: TextStyle(fontSize: 14.0, color: Colors.black),),
+                      Text("34 Tom Mboya Street, Nairobi ", style: TextStyle(fontSize: 14.0, color: Colors.black),),
 
                   ],
                   ),
@@ -216,10 +225,21 @@ class ChocolateCakes extends StatelessWidget {
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                  child: Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
+                                  child:Text(
+                                    "\Kshs. 1300",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
                                 )
                               ],
                             ),
@@ -272,7 +292,7 @@ class ChocolateCakes extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: Text("Chocolate Peanut Butter", style: TextStyle(
+                                  child: Text("Chocolate Peanut", style: TextStyle(
                                     fontSize: 20.0,
                                     color: Colors.black,
                                   ),),
@@ -297,10 +317,21 @@ class ChocolateCakes extends StatelessWidget {
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     border: new Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(Icons.add, color: Colors.green, size: 20.0,),
+                                  child: Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
+                                  child:Text(
+                                    "\Kshs. 1250",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
                                 )
                               ],
                             ),

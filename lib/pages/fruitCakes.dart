@@ -37,10 +37,15 @@ class _FruitCakesState extends State<FruitCakes> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 40.0),
-                  child: Icon(
-                    Icons.keyboard_arrow_left,
-                    color: Colors.white,
-                    size: 40.0,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.pop(context);
+                    },
+                    child: Icon(
+                      Icons.keyboard_arrow_left,
+                      color: Colors.white,
+                      size: 40.0,
+                    ),
                   ),
                 ),
               ],
@@ -265,19 +270,18 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               children: <Widget>[
                                 Container(
+                                  padding: const EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(10.0)),
-                                    border: new Border.all(color: Colors.green),
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.green,
-                                      size: 20.0,
-                                    ),
+                                  child:Text(
+                                    "\Kshs. 800",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 )
                               ],
@@ -362,19 +366,18 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               children: <Widget>[
                                 Container(
+                                  padding: const EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(10.0)),
-                                    border: new Border.all(color: Colors.green),
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.green,
-                                      size: 20.0,
-                                    ),
+                                  child:Text(
+                                    "\Kshs. 850",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 )
                               ],
@@ -458,19 +461,18 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               children: <Widget>[
                                 Container(
+                                  padding: const EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(10.0)),
-                                    border: new Border.all(color: Colors.green),
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.green,
-                                      size: 20.0,
-                                    ),
+                                  child:Text(
+                                    "\Kshs. 900",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 )
                               ],
@@ -528,7 +530,7 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
-                                    "Pineapple Cococnut Cake",
+                                    "Pineapple Coconut",
                                     style: TextStyle(
                                       fontSize: 20.0,
                                       color: Colors.black,
@@ -538,7 +540,7 @@ class _FruitCakesState extends State<FruitCakes> {
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
                                   child: Text(
-                                    "Topped with a creamy rich Coconut Buttercream",
+                                    "Topped with Coconut Buttercream",
                                     style: TextStyle(
                                       fontSize: 12.0,
                                       color: Colors.grey,
@@ -554,19 +556,18 @@ class _FruitCakesState extends State<FruitCakes> {
                             child: Column(
                               children: <Widget>[
                                 Container(
+                                  padding: const EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(10.0)),
-                                    border: new Border.all(color: Colors.green),
+                                        BorderRadius.all(Radius.circular(5.0)),
+                                    border: Border.all(color: Colors.green),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.green,
-                                      size: 20.0,
-                                    ),
+                                  child:Text(
+                                    "\Kshs. 1200",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 )
                               ],
